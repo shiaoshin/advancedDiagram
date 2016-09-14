@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Democracy at 4AM</title>
+	
+	<!-- Mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Meta Info-->
+	<meta name="author" content="">
+    <meta name="description" content="">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="">
+	
+	<!-- Font 
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>-->
+	
+		<!-- CSS Reset -->
+	<link href="css/reset.css" rel="stylesheet">
+	<!-- Makes Life Easier -->
+	<link href="css/snippet.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->	
+</head>
+<body>
+	<div id="prompt"><h2>Sleepy......</h2><hr>I'm going back to main page if don't wake me up.</div>
+	<div id="reload"></div>
+	<div id="darkbox">
+		<div id="article">
+			<div class="left">
+				<img id="goNext" src="img/button_next.png"/>
+				<img id="goPrev" src="img/button_prev.png"/>
+				<img id ="aMedia"/>
+				<div id ="aTime"></div>
+				<div id ="aGroup"></div>
+				<img id ="aType" src ="img/type_article.png"/>
+				<div id ="aContent">
+					<h1></h1>
+					<hr>
+					<p></p>
+				</div>
+			</div>
+			<div class="right">
+				<div id="aPerson">
+					<p style="font-weight:bold;">Keyperson:</p>
+					<ul></ul>
+				</div>
+				<div id="aRelation"></div>
+				<div class="close"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="container">
+		
+		<div id="content">
+			<div id="landing" class="tile size23">
+				<div>
+					<h1>Democracy @ 4am <br><small style="font-size:16px;"> Visualizing Stories in Timeline</small></h1>
+					<h3>Background:</h3>
+						<p>At 4am on March 19th, 2014, Students in Taiwan occupied the parliament in a peaceful manner in order to stand against to the government's lack of transparency and responsiveness to the people's concerns during the processes signing the Cross-Strait Service Trade Agreement (CSSTA) with China.</p>
+					<h3>How to Use:</h3>
+						<p>1.Swipe left or right to explore.<br>2.Tap on each image to examine further details.<br>3.Switch views by tapping the icon on the bottom right</p>
+					<h3>Source Links:</h3><br>
+						<p><a href="http://4am.tw" target="blank">4am.tw</a></p>
+					<h3>Tags:</h3><br>
+						<strong class="tBlack">Student</strong>	
+						<strong class="tRed">Government</strong>	
+						<strong class="tOrange">Police</strong>	
+						<strong class="tBlue">KMT</strong>	
+						<strong class="tGreen">DPP</strong>	
+						<strong class="tPink">Media</strong>	
+						<strong class="tWhite">Civilian</strong>	
+						<strong class="tGray">Others</strong>						
+				</div>
+			</div>
+		</div>
+		
+		<div id="groups">
+			<div class="group tBlack" id="g_Student"><div>Student</div></div>
+			<div class="group tRed" id="g_Government"><div>Government</div></div>
+			<div class="group tOrange" id="g_Police"><div>Police</div></div>
+			<div class="group tBlue" id="g_KMT"><div>KMT</div></div>
+			<div class="group tGreen" id="g_DPP"><div>DPP</div></div>
+			<div class="group tPink" id="g_Media"><div>Media</div></div>
+			<div class="group tWhite" id="g_Civilian"><div>Civilian</div></div>
+			<div class="group tGray" id="g_Others"><div>Others</div></div>
+			<canvas id="relationship"></canvas>
+		</div>
+		
+		<div id="groupTags">
+			<ul>
+				<li class="tag" id="t_Student"><p class="tBlack fade">Student</p></li>
+				<li class="tag" id="t_Government"><p class="tRed fade">Government</p></li>
+				<li class="tag" id="t_Police"><p class="tOrange fade">Police</p></li>
+				<li class="tag" id="t_KMT"><p class="tBlue fade">KMT</p></li>
+				<li class="tag" id="t_DPP"><p class="tGreen fade">DPP</p></li>
+				<li class="tag" id="t_Media"><p class="tPink fade">Media</p></li>
+				<li class="tag" id="t_Civilian"><p class="tWhite fade">Civilian</p></li>
+				<li class="tag" id="t_Others"><p class="tGray fade">Others</p></li>
+			</ul>
+		</div>
+		
+		<footer>
+			<div id="wrapper">
+				<h1>Democracy at 4AM</h1>
+				<input type="search" value="CSSTA">
+				<h1>Time Line</h1>
+				<a href="#" class="func" id="group"><span>Group View</span></a>
+				<!--<a href="#" class="func" id="visual"><span>Visualization</span></a>-->
+				<!--<a href="#" class="func" id="type"><span>Filter by Type</span></a>-->
+			</div>
+		</footer>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<!-- jQuery Custom Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- underscore js -->
+	<script src="js/underscore-min.js"></script>
+	<!-- Tween Lite js -->
+	<script src="js/TweenMax.min.js"></script>
+	<!-- PxTouch js -->
+	<script src="js/PxTouch.js"></script>
+	<!-- Packery js -->
+	<script src="js/packery.pkgd.min.js"></script>
+	<!-- Custom JavaScript -->
+	<script src="js/script.js"></script>
+</body>
+</html>

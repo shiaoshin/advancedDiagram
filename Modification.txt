@@ -1,0 +1,18 @@
+<main css>
+p
+	font-size: 12px
+.project, .callout
+	padding-top: 120px
+.project h4, .callout h4
+	margin: 0 0 0 5px
+	font-size: 15px;
+
+<4am css>
+
+<4am js>
+"json"
+	change source
+"ctxArc"
+	var incre = 122.9
+	var adjust = 62	
+"li style='width: 80%"
